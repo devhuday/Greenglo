@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  ChevronDown,
-  Menu,
-  X,
-  Phone,
-} from "lucide-react";
+import { ChevronDown, Menu, X, Phone } from "lucide-react";
 import Logotipo from "../../assets/image/Logotipo2.png";
 import Logotipo2 from "../../assets/image/Logotipo_1.png";
 
@@ -65,18 +60,31 @@ export const Header = () => {
     setOpenDropdown(null); // Cerrar dropdowns al abrir/cerrar menú móvil
   };
 
+  useEffect(() => {
+    console.log("Scroll actual:", scrollY);
+  }, [scrollY]);
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
+      } ${isScrolled ? "bg-white shadow-lg" : "bg-transparent"}`}
     >
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-3">
-            <div className={`w-10 h-10 transition-colors duration-1000 bg-gradient-to-br from-[#a4cd9f] ${isScrolled ? "to-[#051806]" : "to-[#ffffff]"}  rounded-lg flex items-center justify-center`}>
-              <img src={isScrolled ? Logotipo : Logotipo2} alt="Logotipo" className=" h-10 object-contain" />
+            <div
+              className={`w-10 h-10 transition-colors duration-1000 bg-gradient-to-br from-[#a4cd9f] ${
+                isScrolled ? "to-[#051806]" : "to-[#ffffff]"
+              }  rounded-lg flex items-center justify-center`}
+            >
+              <img
+                src={isScrolled ? Logotipo : Logotipo2}
+                alt="Logotipo"
+                className=" h-10 object-contain"
+              />
             </div>
             <div>
               <h1
@@ -110,7 +118,7 @@ export const Header = () => {
                 >
                   {item.name}
                   {item.hasDropdown && (
-                    <ChevronDown 
+                    <ChevronDown
                       className={`ml-1 h-4 w-4 transition-transform duration-300 ease-in-out group-hover:rotate-180`}
                     />
                   )}
@@ -150,8 +158,8 @@ export const Header = () => {
             <button
               onClick={toggleMobileMenu}
               className={`p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200 ${
-                isScrolled 
-                  ? "text-gray-800 hover:text-green-600 hover:bg-gray-100" 
+                isScrolled
+                  ? "text-gray-800 hover:text-green-600 hover:bg-gray-100"
                   : "text-white hover:text-[#7db64b] hover:bg-white/10"
               }`}
             >
@@ -165,14 +173,16 @@ export const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          isMobileMenuOpen 
-            ? 'max-h-96 opacity-100' 
-            : 'max-h-0 opacity-0'
-        }`}>
-          <div className={`px-2 pt-2 pb-3 space-y-1 ${
-            isScrolled ? 'bg-white' : 'bg-black/20 backdrop-blur-sm'
-          } rounded-b-lg mt-2`}>
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div
+            className={`px-2 pt-2 pb-3 space-y-1 ${
+              isScrolled ? "bg-white" : "bg-black/20 backdrop-blur-sm"
+            } rounded-b-lg mt-2`}
+          >
             {navigationItems.map((item) => (
               <div key={item.name}>
                 {item.hasDropdown ? (
@@ -186,19 +196,21 @@ export const Header = () => {
                       }`}
                     >
                       {item.name}
-                      <ChevronDown 
+                      <ChevronDown
                         className={`h-4 w-4 transition-transform duration-300 ${
-                          openDropdown === item.name ? 'rotate-180' : ''
+                          openDropdown === item.name ? "rotate-180" : ""
                         }`}
                       />
                     </button>
-                    
+
                     {/* Mobile Dropdown */}
-                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      openDropdown === item.name 
-                        ? 'max-h-48 opacity-100' 
-                        : 'max-h-0 opacity-0'
-                    }`}>
+                    <div
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                        openDropdown === item.name
+                          ? "max-h-48 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
                       <div className="pl-6 space-y-1 py-1">
                         {item.dropdownItems.map((subItem) => (
                           <a
@@ -232,7 +244,7 @@ export const Header = () => {
                 )}
               </div>
             ))}
-            
+
             {/* Mobile Contact Button */}
             <div className="pt-2">
               <a
