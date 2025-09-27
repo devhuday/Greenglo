@@ -4,7 +4,7 @@ import { MarqueeHorizontal } from "../Marquee/MarqueeHorizontal";
 
 export function HeroCard() {
   return (
-    <section className="relative w-full h-[115vh] flex items-center justify-center text-white overflow-hidden">
+    <section className="relative w-full h-[105vh]  md:h-[115vh] flex items-center justify-center text-white overflow-hidden">
       {/* Imagen de fondo */}
       <div className="absolute inset-0">
         <img
@@ -20,15 +20,15 @@ export function HeroCard() {
       {/* Contenido principal */}
       <motion.div
         className="relative z-10 max-w-3xl px-6 text-center"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.2 }}
       >
         <motion.span
           className="inline-block bg-[#8fb845] text-white px-4 py-1 rounded-full text-sm font-open-sans font-semibold mb-4 shadow-lg"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
         >
           Bienvenido a Global Green Energy
         </motion.span>
