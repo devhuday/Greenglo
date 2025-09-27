@@ -1,4 +1,4 @@
-import {Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, ArrowRight, CheckCircle } from 'lucide-react';
+import {Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter} from 'lucide-react';
 import Logotipo from "../../assets/image/Logotipo.png";
 const socialLinks = [
   { href: "#", icon: Facebook },

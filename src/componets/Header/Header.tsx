@@ -1,10 +1,6 @@
-import { useState, useEffect, type SetStateAction } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronDown,
-  Sun,
-  Zap,
-  Leaf,
-  ArrowRight,
   Menu,
   X,
   Phone,
