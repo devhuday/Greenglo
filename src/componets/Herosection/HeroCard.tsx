@@ -33,16 +33,16 @@ export function HeroCard() {
           Bienvenido a Global Green Energy
         </motion.span>
 
-        <h1 className="text-4xl md:text-6xl font-montserrat font-extrabold leading-tight">
+        <h1 className="text-5xl md:text-6xl font-poppins font-extrabold leading-tight">
           Energía Solar Sustentable
           <br />
           para un{" "}
-          <span className="text-green-500">
+          <span className="text-primary">
             Futuro Mejor
           </span>
         </h1>
 
-        <p className="mt-6 text-lg text-gray-200">
+        <p className="mt-6 font-montserrat font-light text-lg text-gray-200">
           Descubre cómo nuestras soluciones energéticas pueden transformar tu hogar o negocio. 
           Desde pequeñas instalaciones hasta sistemas de energía renovable complejos, estamos aquí para ayudarte.
         </p>
