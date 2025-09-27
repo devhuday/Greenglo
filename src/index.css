@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-noto-sans-jp: 'NotoSansJP', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-cal-sans: 'Cal Sans', sans-serif;
+    --font-duru-sans: 'Duru Sans', sans-serif;
+    --animate-marquee: marquee 15s linear infinite;
+    --color-primary: #8fb845;
+    --color-primary-light: #F1FFCC;
+    --color-secondary: #a4cc54;
+    --color-terciary: #94B54E;
+}
+
+@layer utilities {
+  /* 1. Definimos la animación de keyframes */
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* 2. Creamos una clase para aplicar la animación */
+  .animate-infinite-scroll {
+    animation: infinite-scroll 30s linear infinite;
+  }
+
+  /* 3. Creamos la lógica para pausar la animación al pasar el cursor.
+     Esto reemplaza la utilidad 'group-hover:pause-animation'. */
+  .group:hover .animate-infinite-scroll {
+    animation-play-state: paused;
+  }
+}
