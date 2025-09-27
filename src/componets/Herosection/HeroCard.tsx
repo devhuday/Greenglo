@@ -4,7 +4,7 @@ import { MarqueeHorizontal } from "../Marquee/MarqueeHorizontal";
 
 export function HeroCard() {
   return (
-    <section className="relative w-full h-[850px]  md:h-[900px] flex items-center justify-center text-white overflow-hidden">
+    <section className="relative w-full h-[870px]  md:h-[900px] flex items-center justify-center text-white overflow-hidden">
       {/* Imagen de fondo */}
       <div className="absolute inset-0">
         <img
