@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X, Phone } from "lucide-react";
-import Logotipo from "../../assets/image/Logotipo.png";
+import Logotipo from "../../assets/image/Logotipo2.png";
 import Logotipo2 from "../../assets/image/Logotipo_1.png";
 
 export const Header = () => {

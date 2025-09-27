@@ -32,7 +32,7 @@ const ctas = [
 
 export const CallToOption = () => {
   return (
-    <div className="relative h-screen w-full bg-[url('./assets/image/Installations/ComercialInst_2.jpg')] bg-cover bg-center">
+    <div className="relative p-2 w-full bg-[url('./assets/image/Installations/ComercialInst_2.jpg')] bg-cover bg-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
@@ -40,10 +40,10 @@ export const CallToOption = () => {
       <div className="relative z-10 flex items-center justify-center h-full">
         <section className="py-10 w-full">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-poppins font-bold text-terciary  mb-4">
               ¿Listo para hacer el cambio a energía solar?
             </h2>
-            <p className="text-lg text-white mb-8">
+            <p className="text-lg font-montserrat font-normal text-white mb-8">
               Contáctanos hoy mismo para una consulta gratuita y descubre cómo
               podemos ayudarte a ahorrar en tus facturas de energía.
             </p>
