@@ -17,10 +17,7 @@ export const App = () => {
 
       {/* Main content */}
       <main className="flex-1 ">
-        <section 
-          className=" min-h-screen"
-          style={{ background: "linear-gradient(to right, #093028, #237a57)" }}
-        >
+        <section >
           <HeroCard />
         </section>
 
