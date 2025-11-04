@@ -7,6 +7,7 @@ import { Mentions} from "./componets/Mentions/Mentions";
 import {SuccessCases} from "./componets/successCases/successCases";
 import { WhyChooseUs } from "./componets/WhyChooseUs/WhyChooseUs";
 import { CallToOption } from "./componets/CallToOption/CallToOption";
+//import { Gallery } from "./componets/Gallery/Gallery";
 export const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,6 +35,7 @@ export const App = () => {
         <section>
           <SuccessCases />
         </section>
+        
         <section>
           <WhyChooseUs />
         </section>

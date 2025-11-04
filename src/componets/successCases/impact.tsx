@@ -55,7 +55,7 @@ const ImpactMetric = ({ value, label, icon }: ImpactMetricProps) => (
 
 export function Impact() {
   return (
-    <section className="mt-16" aria-labelledby="impact-title">
+    <section className="mt-6" aria-labelledby="impact-title">
       <div className="bg-gradient-to-br from-green-600 to-[#a2d349] rounded-2xl p-8 text-white shadow-lg">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {impactData.map((metric) => (

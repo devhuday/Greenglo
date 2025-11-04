@@ -23,6 +23,8 @@
     --animate-marquee: marquee 15s linear infinite;
     --color-primary: #8fb845;
     --color-primary-light: #F1FFCC;
+    --color-primary-dark: #6B8E34;
+    --color-lighter: #abdb53;
     --color-secondary: #a4cc54;
     --color-terciary: #94B54E;
 }

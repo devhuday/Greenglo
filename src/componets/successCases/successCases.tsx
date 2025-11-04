@@ -1,5 +1,6 @@
 import { Star, User } from "lucide-react";
 import {Impact} from "./impact"
+import { Gallery } from "../Gallery/Gallery";
 export const SuccessCases = () => {
   const successCases = [
     {
@@ -145,7 +146,7 @@ export const SuccessCases = () => {
               </div>
             ))}
           </div>
-
+          <Gallery />  
           {/* Estadísticas de impacto */}
           <Impact />
         </div>

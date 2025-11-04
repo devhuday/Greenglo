@@ -105,7 +105,7 @@ export const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden lg:flex space-x-4">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
                 <a
@@ -141,7 +141,7 @@ export const Header = () => {
           </nav>
 
           {/* Contact Button Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href="#contacto"
               className={`px-4 py-2 bg-green-600 text-white rounded-md shadow-md hover:bg-green-700 transition duration-300 flex items-center ${
@@ -154,7 +154,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
               className={`p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200 ${
@@ -174,7 +174,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
