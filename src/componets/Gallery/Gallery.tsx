@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Zap, TrendingUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
 import solarPlant1 from "@/assets/Carrusel/carrusel_1.jpg";
 import solarPlant2 from "@/assets/Carrusel/carrusel_2.jpg";
 import solarPlant3 from "@/assets/Carrusel/carrusel_3.jpg";
