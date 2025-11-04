@@ -1,8 +1,15 @@
 import Roullet2 from "../../assets/image/Roullet2.jpg";
-import { Phone } from 'lucide-react'; 
+import { Phone } from 'lucide-react';
+import { WhatsappLogoIcon } from "@phosphor-icons/react"; 
 import SolarEnergy  from '../../assets/Icons/SolarEnergy_01.svg?react';
 import PanelSolar from '../../assets/Icons/SunEnergy.svg?react';
 export const AboutUs = () => {
+  const botonwhatsapp = () => {
+    const phoneNumber = "573136145611";
+    const message = "¡Hola! Estoy interesado en obtener más información sobre sus servicios.";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+  }
   return (
     <section className="bg-white py-15 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
       {/* Left Content */}
@@ -49,18 +56,13 @@ export const AboutUs = () => {
 
         {/* CTA */}
         <div className="flex items-center gap-6 mt-6">
-          <button className="bg-secondary text-white px-6 py-3 rounded shadow hover:bg-green-700 transition">
-            Contactanos
+          <button onClick={() =>{botonwhatsapp()}} className="bg-primary text-white font-cal-sans flex justify-center items-center gap-1 px-2 py-3 rounded-2xl shadow hover:bg-green-700 transition">
+            <div className="w-10 h-10 flex items-center justify-start ">
+              <WhatsappLogoIcon size={32} className=" w-10 text-white" />
+            </div>
+            <div className=""><p className="text-white font-cal-sans text-xl">Contáctanos</p></div>
           </button>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center shadow bg-primary-light">
-              <Phone className=" w-10 text-tertiary" />
-            </div>
-            <div>
-              <p className="text-gray-500 text-sm">Llamanos 24/7</p>
-              <p className="text-black font-bold">+57 3017535547</p>
-            </div>
-          </div>
+          
         </div>
       </div>
 

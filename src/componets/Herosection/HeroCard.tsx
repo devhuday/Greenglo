@@ -3,6 +3,12 @@ import Bg from "../../assets/image/welcomebg.jpg";
 import { MarqueeHorizontal } from "../Marquee/MarqueeHorizontal";
 
 export function HeroCard() {
+  const botonwhatsapp = () => {
+    const phoneNumber = "573136145611";
+    const message = "¡Hola! Estoy interesado en obtener más información sobre sus servicios.";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+  }
   return (
     <section className="relative w-full h-[870px]  md:h-[900px] flex items-center justify-center text-white overflow-hidden">
       {/* Imagen de fondo */}
@@ -53,12 +59,14 @@ export function HeroCard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <a
-            href="#servicios"
+          <button
+            onClick={() => {
+              botonwhatsapp();
+            }}
             className="px-6 py-3 bg-transparent text-white font-montserrat font-semibold rounded-2xl shadow-md border-2 border-primary text-[15px] hover:bg-green-600 transition"
           >
             Cotiza tu sistema
-          </a>
+          </button>
         </motion.div>
       </motion.div>
       <section className="absolute bottom-0 left-0 w-full z-10">

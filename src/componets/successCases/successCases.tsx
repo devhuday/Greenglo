@@ -42,9 +42,9 @@ export const SuccessCases = () => {
       panels: 180,
       projectType: "Agrícola",
     },
-  ];
+  ]
   return (
-    <div className="w-full flex flex-col items-center py-2 bg-[linear-gradient(180deg,_#FAFFEB_80%,_#FFFFFF_95%)] ">
+    <div className="w-full flex flex-col items-center py-2 bg-gray-50">
       <section className="py-10 bg-transparent w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -145,7 +145,7 @@ export const SuccessCases = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div  >
           <Gallery />  
           {/* Estadísticas de impacto */}
           <Impact />

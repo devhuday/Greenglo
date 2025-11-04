@@ -117,7 +117,7 @@ export const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-2 sm:p-4">
+    <div className="w-full max-w-7xl mx-auto p-2 sm:p-4 mt-8">
       <div 
         className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
         onMouseEnter={() => setIsPaused(true)}
