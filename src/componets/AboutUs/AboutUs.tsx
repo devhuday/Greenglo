@@ -1,5 +1,4 @@
 import Roullet2 from "../../assets/image/Roullet2.jpg";
-import { Phone } from 'lucide-react';
 import { WhatsappLogoIcon } from "@phosphor-icons/react"; 
 import SolarEnergy  from '../../assets/Icons/SolarEnergy_01.svg?react';
 import PanelSolar from '../../assets/Icons/SunEnergy.svg?react';
